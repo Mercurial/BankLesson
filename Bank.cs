@@ -3,7 +3,6 @@ using System;
 class Bank {
     public string Name { get; set; }
     public Account[] Accounts { get; private set; }
-
     private int TotalAccounts { get; set; } = 0;
 
     public Bank(string name)

@@ -33,7 +33,6 @@ namespace ClarkBank
                             Console.WriteLine($"Account Id, {account.Id}");
                             Console.WriteLine($"Your balance is: ${account.Balance}");
                             Console.ReadKey();
-                            
                         }
                         else
                         {
