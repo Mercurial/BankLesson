@@ -2,12 +2,12 @@ using System;
 
 class Bank {
     public string Name { get; set; }
-    public Account[] Accounts { get; private set; }
+    private Account[] Accounts { get; set; }
     private int TotalAccounts { get; set; } = 0;
 
-    public Bank(string name)
+    public Bank(string n)
     {
-        Name = name;
+        Name = n;
         Accounts = new Account[10];
         for(var x = 0; x < Accounts.Length; x++) Accounts[x] = new Account();
     }
@@ -36,6 +36,18 @@ class Bank {
             }
         }
 
+        return null;
+    }
+
+    public Account FindById(Guid id)
+    {
+        foreach(Account a in Accounts)
+        {
+            if(a.Id == id)
+            {
+                return a;
+            }
+        }
         return null;
     }
 
