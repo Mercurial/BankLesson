@@ -5,10 +5,11 @@ class Account
     public string Username { get; set; }
     public string Password { get; set; }
     public float Balance { get; private set; } = 0.0f;
+    public bool IsRegistered { get; set; } = false;
 
     public float Withdraw(float amount)
-    { 
-        if(amount <= Balance)
+    {
+        if (amount <= Balance)
         {
             Balance -= amount;
         }
